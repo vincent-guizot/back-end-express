@@ -1,0 +1,16 @@
+[
+   {
+      "id": 1,
+      "name": "Vincent",
+      "subject": "js-developer",
+      "age": 25,
+      "city": "tokyo"
+   },
+   {
+      "id": 2,
+      "name": "Admin",
+      "subject": "math",
+      "age": 24,
+      "city": "Bandung"
+   }
+]

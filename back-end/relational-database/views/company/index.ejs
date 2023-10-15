@@ -1,0 +1,63 @@
+<%- include('../header') %>
+
+<div class="row">
+  <div class="col-12 text-center">
+    <h5>Company Pages</h5>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. In veritatis aut
+      dolores fugiat animi rerum ducimus, tempora, molestias optio expedita quo
+      possimus nostrum quae! Harum reiciendis alias laudantium eum nesciunt!
+    </p>
+
+    <a href="/companies/create" class="btn btn-sm btn-primary">+ Add Company</a>
+  </div>
+  <div class="col-12 my-2">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Revenue</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% profiles.forEach(profile => { %>
+        <tr>
+          <td><%= profile.company.id %></td>
+          <td>
+            <div class="row">
+              <div class="col-2">
+                <img
+                  class="img-fluid rounded-circle"
+                  src="<%= profile.company.image %>"
+                  alt=""
+                />
+              </div>
+              <div class="col-10">
+                <h5>
+                  <a href="/companies/info/<%= profile.company.id %>">
+                    <%= profile.company.name %>
+                  </a>
+                </h5>
+
+                <small class="badge bg-primary"
+                  ><%= profile.company.category%></small
+                >
+              </div>
+            </div>
+          </td>
+          <td><%= profile.address %>, <%= profile.city %></td>
+          <td><%= profile.revenue %></td>
+          <td>
+            <a href="" class="btn btn-sm btn-info">Edit</a>
+            <a href="" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('../footer') %>

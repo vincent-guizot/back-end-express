@@ -1,0 +1,29 @@
+<%- include('../header') %>
+    <div class="row text-center my-3">
+        <div class="col-md-3">
+            <div class="w-100">
+                <img class="mb-3 img-fluid rounded-circle" src="<%= PI.image%>" alt="">
+            </div>
+            <div class="w-100">
+                <h3><%= PI.name %></h3>
+                <h5>Rp. <%= PI.price %></h5>
+                <p class="text-italic"><%= PI.stock %> pcs</p>
+                <small class="badge bg-primary"><%= PI.type %></small>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <% PI.ingredients.forEach(ingredient => { %>
+                    <div class="col-md-1">
+                        <div class="w-100">
+                            <img class="img-fluid rounded-circle" src="https://images.all-free-download.com/images/graphiclarge/food_ingredients_icons_vector_graphics_546329.jpg" alt="">
+                        </div>
+                        <div class="w-100">
+                            <p class="fw-bold"><%= ingredient.name%></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+<%- include('../footer') %>

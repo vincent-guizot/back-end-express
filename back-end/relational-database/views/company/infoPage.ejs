@@ -1,0 +1,37 @@
+<%- include('../header') %>
+<div class="row">
+  <div class="col-6 mx-auto">
+    <div class="w-100 mb-3 text-center">
+      <img src="<%= profile.company.image %>" class="img-fluid rounded-circle" />
+    </div>
+    <div class="w-100 mb-3 text-center">
+      <h3><%= profile.company.name %></h3>
+      <small class="badge bg-primary"><%= profile.company.category %></small>
+      <hr/>
+    </div>
+    <div class="w-100 mb-3">
+      <form action="">
+        <div class="mb-3">
+          <label for="" class="form-label">Address</label>
+          <textarea
+            class="form-control"
+            rows="5"
+          ><%= profile.address %></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="">City</label>
+          <input type="text" class="form-control" value="<%= profile.city %>" />
+        </div>
+        <div class="mb-3">
+          <label for="">Revenue</label>
+          <input
+            type="text"
+            class="form-control"
+            value="$ <%= profile.revenue %>"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('../footer') %>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecturers and Students</title>
+    <style>
+      table {
+        width: 600px;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        padding: 4px 8px;
+        color: white;
+        background-color: maroon;
+        border: none;
+      }
+      a:hover {
+        color: maroon;
+        background-color: white;
+        border: 1px solid black;
+      }
+      a.information-user {
+        border: none;
+        background-color: white;
+        text-decoration: none;
+        font-weight: bold;
+        color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+
+    <a href="/lecturers">Lecturers</a>
+    <a href="/students">Students</a>
+    <hr />
+    <h3>Lecturers Page</h3>
+
+    <a href="/lecturers/create">+ Add Lecturer</a>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptate
+      minima a unde assumenda laboriosam ex labore suscipit nihil. Eos
+      asperiores adipisci officiis, aspernatur error vero saepe temporibus iusto
+      quasi.
+    </p>
+    <div>
+        <ul>
+            <li><%= lecturer.id%></li>
+            <li><%= lecturer.name%></li>
+            <li><%= lecturer.subject%></li>
+            <li><%= lecturer.age%> years old</li>
+            <li><%= lecturer.city%></li>
+        </ul>
+    </ul>
+       <a href="/lecturers">Back to lecturers page</a>
+    </div>
+  </body>
+</html>

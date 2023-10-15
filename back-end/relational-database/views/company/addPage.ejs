@@ -1,0 +1,23 @@
+<%- include('../header') %>
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <form method="post" action="/companies/create">
+                <div class="mb-3">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" placeholder="Input Name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="">Category</label>
+                    <select class="form-control" name="category">
+                        <option value="technology">Technology</option>
+                        <option value="farming">Farming</option>
+                        <option value="pastry">Pastry</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary"type="submit">Submit Company</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('../footer') %>
